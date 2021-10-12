@@ -18,9 +18,39 @@ class Main {
         PaintType = input.nextInt();
 
         input.close();
-        If (Paint Type ==1){
+        String message;
+        if (PaintType == 1) {
+            message = "Paint is good";
+        } else {
+            message = "Paint is bad";
 
         }
+
+        message = (PaintType == 1) ? "Paint is good";
+        String string = new String((PaintType == 1) ? "Paint is good");
+        System.out.println(message);
+        System.out.println(string);
+
+        switch (PaintType) {
+
+            case 0:
+                System.out.println("Case is 0");
+                break;
+
+            case 1:
+                System.out.println("Case is 1");
+                break;
+            case 2:
+                System.out.println("Case is 2");
+                break;
+            default:
+                System.out.println("Case is 3");
+                break;
+        }
+        ;
+        System.out.println(message);
+
+
         System.out.println(PaintCost * WallArea);
     }
 }
