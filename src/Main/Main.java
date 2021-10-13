@@ -6,51 +6,30 @@ class Main {
     public static void main(String[] args) {
         float PaintCost;
         float WallArea;
-        int PaintType;
+        float Budjet;
+        boolean PaintType = true;
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter the paint cost:");
+        System.out.println("Enter the paint cost:");
         PaintCost = input.nextFloat();
-        System.out.print("Enter the wall area:");
+        System.out.println("Enter the wall area:");
         WallArea = input.nextFloat();
-        System.out.print("Enter the Paint Type");
-        PaintType = input.nextInt();
+        System.out.println("Enter the Paint Type");
+        PaintType = input.nextBoolean();
+
 
         input.close();
-        String message;
-        if (PaintType == 1) {
-            message = "Paint is good";
+        if (PaintType = true) {
+            System.out.println(2 * PaintCost * WallArea);
         } else {
-            message = "Paint is bad";
-
+            System.out.println(PaintCost * WallArea);
         }
 
-        message = (PaintType == 1) ? "Paint is good";
-        String string = new String((PaintType == 1) ? "Paint is good");
-        System.out.println(message);
-        System.out.println(string);
+        int[] MultipleWallAreas = {14, 56, 32, 25};
 
-        switch (PaintType) {
-
-            case 0:
-                System.out.println("Case is 0");
-                break;
-
-            case 1:
-                System.out.println("Case is 1");
-                break;
-            case 2:
-                System.out.println("Case is 2");
-                break;
-            default:
-                System.out.println("Case is 3");
-                break;
+        for (int i = 0; i < MultipleWallAreas.length; i++) {
+            System.out.println(i * PaintCost);
         }
-        ;
-        System.out.println(message);
-
-
-        System.out.println(PaintCost * WallArea);
     }
 }
