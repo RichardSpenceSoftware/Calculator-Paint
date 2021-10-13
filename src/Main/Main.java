@@ -6,8 +6,8 @@ class Main {
     public static void main(String[] args) {
         float PaintCost;
         float WallArea;
-        float Budjet;
-        boolean PaintType = true;
+        float Budjet = 600;
+        boolean PaintType;
 
         Scanner input = new Scanner(System.in);
 
@@ -26,10 +26,26 @@ class Main {
             System.out.println(PaintCost * WallArea);
         }
 
-        int[] MultipleWallAreas = {14, 56, 32, 25};
+        boolean Overbudjet = true;
+        while (Overbudjet ==true) {
 
-        for (int i = 0; i < MultipleWallAreas.length; i++) {
-            System.out.println(i * PaintCost);
+            if (Budjet > 500) {
+                System.out.println("You do not have enough money");
+            } else {
+                Overbudjet = false;
+                System.out.println("You have enough money");
+            }
+            break;
+        }
+        int count = 0;
+
+        int[][] MultipleWallHouses = {{14, 56, 32, 25},{23,6,67,20}};
+
+        for (int i = 0; i < MultipleWallHouses.length; i++) {
+            for(int j= 0;j < MultipleWallHouses[i].length; j++){
+                MultipleWallHouses[i][j] = ++count;
+                System.out.print(MultipleWallHouses[i][j] * PaintCost);
+            }
         }
     }
 }
